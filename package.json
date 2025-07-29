@@ -1,0 +1,33 @@
+{
+  "name": "ai-code-reviewer",
+  "displayName": "AI Code Reviewer",
+  "description": "Use AI to review and fix your code",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:aiCodeReviewer.review",
+    "onCommand:aiCodeReviewer.fix"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiCodeReviewer.review",
+        "title": "AI Code Reviewer: Review Code"
+      },
+      {
+        "command": "aiCodeReviewer.fix",
+        "title": "AI Code Reviewer: Suggest Fixes"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "echo 'Nothing to compile, JS only.'"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
